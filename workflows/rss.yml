@@ -1,6 +1,8 @@
 on:
   rss:
-    url: https://github.com/lyrl/actionsflow-worflow/commits.atom
+    url:
+      - https://github.com/lyrl/actionsflow-worflow/commits.atom
+      - https://github.com/lyrl/google_translator/commits.atom
 jobs:
   print:
     name: Print
