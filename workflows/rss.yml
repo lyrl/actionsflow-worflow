@@ -1,8 +1,56 @@
 on:
   rss:
     url:
-      - https://github.com/lyrl/actionsflow-worflow/commits.atom
-      - https://github.com/lyrl/google_translator/commits.atom
+      - https://rsshub.app/github/issue/getumbrel/llama-gpt
+      - https://github.com/1Panel-dev/1Panel/releases.atom
+      - https://github.com/actionsflow/actionsflow/releases.atom
+      - https://github.com/easychen/aiapi/releases.atom
+      - https://github.com/Databingo/aih/releases.atom
+      - https://github.com/appsmithorg/appsmith/releases.atom
+      - https://github.com/IceWhaleTech/CasaOS/releases.atom
+      - https://github.com/dgtlmoon/changedetection.io/releases.atom
+      - https://github.com/chartbrew/chartbrew/releases.atom
+      - https://github.com/Bin-Huang/chatbox/releases.atom
+      - https://github.com/lencx/ChatGPT/releases.atom
+      - https://github.com/cocktailpeanut/dalai/releases.atom
+      - https://github.com/kuafuai/DevOpsGPT/releases.atom
+      - https://github.com/veler/DevToys/releases.atom
+      - https://github.com/langgenius/dify/releases.atom
+      - https://github.com/directus/directus/releases.atom
+      - https://github.com/embedchain/embedchain/releases.atom
+      - https://github.com/FlowiseAI/Flowise/releases.atom
+      - https://github.com/NationalSecurityAgency/ghidra/releases.atom
+      - https://github.com/smol-ai/GodMode/releases.atom
+      - https://github.com/Pythagora-io/gpt-pilot/releases.atom
+      - https://github.com/Z4nzu/hackingtool/releases.atom
+      - https://github.com/ajnart/homarr/releases.atom
+      - https://github.com/k8sgpt-ai/k8sgpt/releases.atom
+      - https://github.com/khoj-ai/khoj/releases.atom
+      - https://github.com/ggerganov/llama.cpp/releases.atom
+      - https://github.com/metabase/metabase/releases.atom
+      - https://github.com/geekan/MetaGPT/releases.atom
+      - https://github.com/mindsdb/mindsdb/releases.atom
+      - https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor/releases.atom
+      - https://github.com/nocodb/nocodb/releases.atom
+      - https://github.com/binwiederhier/ntfy/releases.atom
+      - https://github.com/KillianLucas/open-interpreter/releases.atom
+      - https://github.com/openai-translator/openai-translator/releases.atom
+      - https://github.com/openchatai/OpenCopilot/releases.atom
+      - https://github.com/organicmaps/organicmaps/releases.atom
+      - https://github.com/tw93/Pake/releases.atom
+      - https://github.com/portainer/portainer/releases.atom
+      - https://github.com/neulab/prompt2model/releases.atom
+      - https://github.com/StanGirard/quivr/releases.atom
+      - https://github.com/meienberger/runtipi/releases.atom
+      - https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases.atom
+      - https://github.com/roboflow/supervision/releases.atom
+      - https://github.com/sweepai/sweep/releases.atom
+      - https://github.com/ToolJet/ToolJet/releases.atom
+      - https://github.com/Danily07/Translumo/releases.atom
+      - https://github.com/neuml/txtai/releases.atom
+      - https://github.com/webstudio-is/webstudio/releases.atom
+    config:
+      limit: 15
 jobs:
   print:
     name: Print
@@ -30,4 +78,3 @@ jobs:
           title:  ${{on.rss.outputs.title}}
           message: ${{on.rss.outputs.contentSnippet}}
           url: ${{on.rss.outputs.link}}
-
