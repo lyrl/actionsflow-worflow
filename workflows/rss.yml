@@ -49,8 +49,8 @@ on:
       - https://github.com/Danily07/Translumo/releases.atom
       - https://github.com/neuml/txtai/releases.atom
       - https://github.com/webstudio-is/webstudio/releases.atom
-    config:
-      limit: 15
+    # config:
+    #   limit: 15
 jobs:
   print:
     name: Print
@@ -65,16 +65,16 @@ jobs:
           echo title: $title
           echo contentSnippet: $contentSnippet
           echo link: $link
-  pushover-actions:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2 
-      - name: pushover-actions
-        uses: umahmood/pushover-actions@main
-        env:
-          PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
-          PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
-        with:
-          title:  ${{on.rss.outputs.title}}
-          message: ${{on.rss.outputs.contentSnippet}}
-          url: ${{on.rss.outputs.link}}
+  # pushover-actions:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2 
+  #     - name: pushover-actions
+  #       uses: umahmood/pushover-actions@main
+  #       env:
+  #         PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
+  #         PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
+  #       with:
+  #         title:  ${{on.rss.outputs.title}}
+  #         message: ${{on.rss.outputs.contentSnippet}}
+  #         url: ${{on.rss.outputs.link}}
