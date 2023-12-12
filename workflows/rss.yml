@@ -50,6 +50,7 @@ on:
       - https://github.com/neuml/txtai/releases.atom
       - https://github.com/webstudio-is/webstudio/releases.atom
       - https://github.com/SuperDuperDB/superduperdb/releases.atom
+      - https://github.com/Codium-ai/pr-agent/releases.atom
     # config:
     #   limit: 15
 jobs:
@@ -66,16 +67,16 @@ jobs:
           echo title: $title
           echo contentSnippet: $contentSnippet
           echo link: $link
-  pushover-actions:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2 
-      - name: pushover-actions
-        uses: umahmood/pushover-actions@main
-        env:
-          PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
-          PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
-        with:
-          title:  ${{on.rss.outputs.title}}
-          message: ${{on.rss.outputs.contentSnippet}}
-          url: ${{on.rss.outputs.link}}
+  # pushover-actions:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2 
+  #     - name: pushover-actions
+  #       uses: umahmood/pushover-actions@main
+  #       env:
+  #         PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
+  #         PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
+  #       with:
+  #         title:  ${{on.rss.outputs.title}}
+  #         message: ${{on.rss.outputs.contentSnippet}}
+  #         url: ${{on.rss.outputs.link}}
