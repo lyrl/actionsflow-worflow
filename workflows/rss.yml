@@ -49,6 +49,7 @@ on:
       - https://github.com/Danily07/Translumo/releases.atom
       - https://github.com/neuml/txtai/releases.atom
       - https://github.com/webstudio-is/webstudio/releases.atom
+      - https://github.com/SuperDuperDB/superduperdb/releases.atom
     # config:
     #   limit: 15
 jobs:
