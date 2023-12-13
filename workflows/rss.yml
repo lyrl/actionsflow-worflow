@@ -90,7 +90,7 @@ jobs:
               with:
                 url: https://ntfy.sh/lyrl-dev
                 method: 'POST'
-                data: '${{on.rss.outputs.title}} ${{on.rss.outputs.contentSnippet}} ${{on.rss.outputs.link}}'
+                body: '${{on.rss.outputs.title}} ${{on.rss.outputs.contentSnippet}} ${{on.rss.outputs.link}}'
             - run: echo ${{ steps.api.outputs.status }}
             - run: echo ${{ steps.api.outputs.data }}
             - run: echo ${{ steps.api.outputs.headers }}
