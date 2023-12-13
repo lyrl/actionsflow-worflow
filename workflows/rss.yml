@@ -80,3 +80,17 @@ jobs:
           title:  ${{on.rss.outputs.title}}
           message: ${{on.rss.outputs.contentSnippet}}
           url: ${{on.rss.outputs.link}}
+  test-curl-action:
+        name: 'Perform REST API'
+        runs-on: ubuntu-latest
+        steps:
+            - name: 'Call API'
+              uses: actionsflow/axios@v1
+              id: api
+              with:
+                url: https://ntfy.sh/lyrl-dev
+                method: 'POST'
+                data: '${{on.rss.outputs.title}} ${{on.rss.outputs.contentSnippet}} ${{on.rss.outputs.link}}'
+            - run: echo ${{ steps.api.outputs.status }}
+            - run: echo ${{ steps.api.outputs.data }}
+            - run: echo ${{ steps.api.outputs.headers }}
