@@ -1,10 +1,11 @@
 on:
   rss:
     url:
-      - https://rsshub.app/github/comments/azerothcore/azerothcore-wotlk
       - https://rsshub.app/github/pull/azerothcore/azerothcore-wotlk
+      - https://github.com/azerothcore/azerothcore-wotlk/commits.atom
+      - https://rsshub.app/github/repos/azerothcore
     config:
-      limit: 2
+      limit: 4
 jobs:
   print:
     name: Print
