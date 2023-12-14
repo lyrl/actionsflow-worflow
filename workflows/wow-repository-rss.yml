@@ -1,0 +1,33 @@
+on:
+  rss:
+    url:
+      - https://rsshub.app/github/comments/azerothcore/azerothcore-wotlk
+    config:
+      limit: 1
+jobs:
+  print:
+    name: Print
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Outputs
+        env:
+          title: ${{on.rss.outputs.title}}
+          contentSnippet: ${{on.rss.outputs.contentSnippet}}
+          link: ${{on.rss.outputs.link}}
+        run: |
+          echo title: $title
+          echo contentSnippet: $contentSnippet
+          echo link: $link
+    push-to-telegram:
+        name: Build
+        runs-on: ubuntu-latest
+        steps:
+          - name: send telegram message on push
+            uses: appleboy/telegram-action@master
+            with:
+              to: "-1002090832372"
+              token: "6468152559:AAGDomMcIGJ2FAbkLP5P2xMc71os-OBZmSQ"
+              message: |
+                ${{on.rss.outputs.title}}
+                ${{on.rss.outputs.contentSnippet}}
+                link: ${{on.rss.outputs.link}}
