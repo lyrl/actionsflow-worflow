@@ -95,7 +95,7 @@ jobs:
               id: split
               run: |
                 url="${{on.rss.outputs.link}}"
-                splitedrepo="$(echo $url | awk -F'/' '{print $4"/"$5}')"
+                splitedrepo="$(echo $url | awk -F'/' '{print $4" "$5}')"
                 echo "repo=$splitedrepo" >> $GITHUB_ENV
             - name: 'Call API'
               uses: actionsflow/axios@v1
@@ -103,7 +103,7 @@ jobs:
               with:
                 url: https://ntfy.sh/lyrl-dev
                 method: 'POST'
-                body: 'Repo:${{env.repo}} ${{on.rss.outputs.title}} \n ${{on.rss.outputs.contentSnippet}} \n ${{on.rss.outputs.link}}'
+                body: 'Repo:${{env.repo}} ${{on.rss.outputs.title}} ${{on.rss.outputs.contentSnippet}} ${{on.rss.outputs.link}}'
             - run: echo ${{ steps.api.outputs.status }}
             - run: echo ${{ steps.api.outputs.data }}
             - run: echo ${{ steps.api.outputs.headers }}
