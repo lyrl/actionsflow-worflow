@@ -87,23 +87,23 @@ jobs:
   #         title:  ${{on.rss.outputs.title}}
   #         message: ${{on.rss.outputs.contentSnippet}}
   #         url: ${{on.rss.outputs.link}}
-  # test-curl-action:
-  #       name: 'Perform REST API'
-  #       runs-on: ubuntu-latest
-  #       steps:
-  #           - name: Split URL
-  #             id: split
-  #             run: |
-  #               url="${{on.rss.outputs.link}}"
-  #               splitedrepo="$(echo $url | awk -F'/' '{print $4"/"$5}')"
-  #               echo "repo=$splitedrepo" >> $GITHUB_ENV
-  #           - name: 'Call API'
-  #             uses: actionsflow/axios@v1
-  #             id: api
-  #             with:
-  #               url: https://ntfy.sh/lyrl-dev
-  #               method: 'POST'
-  #               body: 'Repo:${{env.repo}} ${{on.rss.outputs.title}} \n ${{on.rss.outputs.contentSnippet}} \n ${{on.rss.outputs.link}}'
-  #           - run: echo ${{ steps.api.outputs.status }}
-  #           - run: echo ${{ steps.api.outputs.data }}
-  #           - run: echo ${{ steps.api.outputs.headers }}
+  test-curl-action:
+        name: 'Perform REST API'
+        runs-on: ubuntu-latest
+        steps:
+            - name: Split URL
+              id: split
+              run: |
+                url="${{on.rss.outputs.link}}"
+                splitedrepo="$(echo $url | awk -F'/' '{print $4"/"$5}')"
+                echo "repo=$splitedrepo" >> $GITHUB_ENV
+            - name: 'Call API'
+              uses: actionsflow/axios@v1
+              id: api
+              with:
+                url: https://ntfy.sh/lyrl-dev
+                method: 'POST'
+                body: 'Repo:${{env.repo}} ${{on.rss.outputs.title}} \n ${{on.rss.outputs.contentSnippet}} \n ${{on.rss.outputs.link}}'
+            - run: echo ${{ steps.api.outputs.status }}
+            - run: echo ${{ steps.api.outputs.data }}
+            - run: echo ${{ steps.api.outputs.headers }}
