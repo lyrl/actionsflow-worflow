@@ -58,6 +58,10 @@ on:
       - https://github.com/SuperDuperDB/superduperdb/releases.atom
       - https://github.com/Codium-ai/pr-agent/releases.atom
       - https://github.com/louislam/uptime-kuma/releases.atom
+      # PassWall
+      - https://github.com/xiaorouji/openwrt-passwall/releases.atom
+      - https://github.com/XTLS/Xray-core/releases.atom
+      - https://github.com/chaitin/xray/releases.atom
     # config:
     #   limit: 15
 jobs:
@@ -87,23 +91,23 @@ jobs:
   #         title:  ${{on.rss.outputs.title}}
   #         message: ${{on.rss.outputs.contentSnippet}}
   #         url: ${{on.rss.outputs.link}}
-  test-curl-action:
-        name: 'Perform REST API'
-        runs-on: ubuntu-latest
-        steps:
-            - name: Split URL
-              id: split
-              run: |
-                url="${{on.rss.outputs.link}}"
-                splitedrepo="$(echo $url | awk -F'/' '{print $4" "$5}')"
-                echo "repo=$splitedrepo" >> $GITHUB_ENV
-            - name: 'Call API'
-              uses: actionsflow/axios@v1
-              id: api
-              with:
-                url: https://ntfy.sh/lyrl-dev
-                method: 'POST'
-                body: 'Repo:${{env.repo}} ${{on.rss.outputs.title}} ${{on.rss.outputs.contentSnippet}} ${{on.rss.outputs.link}}'
-            - run: echo ${{ steps.api.outputs.status }}
-            - run: echo ${{ steps.api.outputs.data }}
-            - run: echo ${{ steps.api.outputs.headers }}
+  # push-to-ntfy:
+  #       name: 'Push Ntfy'
+  #       runs-on: ubuntu-latest
+  #       steps:
+  #           - name: Split URL
+  #             id: split
+  #             run: |
+  #               url="${{on.rss.outputs.link}}"
+  #               splitedrepo="$(echo $url | awk -F'/' '{print $4" "$5}')"
+  #               echo "repo=$splitedrepo" >> $GITHUB_ENV
+  #           - name: 'Call API'
+  #             uses: actionsflow/axios@v1
+  #             id: api
+  #             with:
+  #               url: https://ntfy.sh/lyrl-dev
+  #               method: 'POST'
+  #               body: 'Repo:${{env.repo}} ${{on.rss.outputs.title}} ${{on.rss.outputs.contentSnippet}} ${{on.rss.outputs.link}}'
+  #           - run: echo ${{ steps.api.outputs.status }}
+  #           - run: echo ${{ steps.api.outputs.data }}
+  #           - run: echo ${{ steps.api.outputs.headers }}
