@@ -1,8 +1,8 @@
 on:
   rss:
     url:
-      - https://rsshub.app/github/pull/DIYgod/RSSHub
       - https://rsshub.app/github/comments/azerothcore/azerothcore-wotlk
+      - https://rsshub.app/github/pull/azerothcore/azerothcore-wotlk
     config:
       limit: 2
 jobs:
