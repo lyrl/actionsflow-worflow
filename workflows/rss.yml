@@ -52,6 +52,7 @@ on:
       - https://github.com/SuperDuperDB/superduperdb/releases.atom
       - https://github.com/Codium-ai/pr-agent/releases.atom
       - https://github.com/louislam/uptime-kuma/releases.atom
+      - https://github.com/HuolalaTech/page-spy-web/releases.atom
     # config:
     #   limit: 15
 jobs:
