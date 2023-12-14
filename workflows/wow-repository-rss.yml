@@ -1,6 +1,7 @@
 on:
   rss:
     url:
+      - https://rsshub.app/github/pull/DIYgod/RSSHub
       - https://rsshub.app/github/comments/azerothcore/azerothcore-wotlk
     config:
       limit: 2
