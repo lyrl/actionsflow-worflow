@@ -89,7 +89,7 @@ jobs:
               id: split
               run: |
                 url="${{on.rss.outputs.link}}"
-                splitedrepo="$(echo $url | awk -F/ '{print $NF}')"
+                splitedrepo="$(echo $url | awk -F'/' '{print $4"/"$5}')"
                 echo "repo=$splitedrepo" >> $GITHUB_ENV
             - name: 'Call API'
               uses: actionsflow/axios@v1
