@@ -1,22 +1,24 @@
 on:
   rss:
     url:
-      - https://rsshub.app/github/issue/getumbrel/llama-gpt
       - https://github.com/1Panel-dev/1Panel/releases.atom
       - https://github.com/actionsflow/actionsflow/releases.atom
       - https://github.com/easychen/aiapi/releases.atom
       - https://github.com/Databingo/aih/releases.atom
       - https://github.com/appsmithorg/appsmith/releases.atom
+      - https://github.com/bigcapitalhq/bigcapital/releases.atom
       - https://github.com/IceWhaleTech/CasaOS/releases.atom
       - https://github.com/dgtlmoon/changedetection.io/releases.atom
       - https://github.com/chartbrew/chartbrew/releases.atom
       - https://github.com/Bin-Huang/chatbox/releases.atom
       - https://github.com/lencx/ChatGPT/releases.atom
+      - https://github.com/spdustin/ChatGPT-AutoExpert/releases.atom
       - https://github.com/cocktailpeanut/dalai/releases.atom
       - https://github.com/kuafuai/DevOpsGPT/releases.atom
       - https://github.com/veler/DevToys/releases.atom
       - https://github.com/langgenius/dify/releases.atom
       - https://github.com/directus/directus/releases.atom
+      - https://github.com/89luca89/distrobox/releases.atom
       - https://github.com/embedchain/embedchain/releases.atom
       - https://github.com/FlowiseAI/Flowise/releases.atom
       - https://github.com/NationalSecurityAgency/ghidra/releases.atom
@@ -37,22 +39,25 @@ on:
       - https://github.com/openai-translator/openai-translator/releases.atom
       - https://github.com/openchatai/OpenCopilot/releases.atom
       - https://github.com/organicmaps/organicmaps/releases.atom
+      - https://github.com/HuolalaTech/page-spy-web/releases.atom
       - https://github.com/tw93/Pake/releases.atom
       - https://github.com/portainer/portainer/releases.atom
       - https://github.com/neulab/prompt2model/releases.atom
       - https://github.com/StanGirard/quivr/releases.atom
-      - https://github.com/meienberger/runtipi/releases.atom
+      - https://github.com/runtipi/runtipi/releases.atom
       - https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases.atom
       - https://github.com/roboflow/supervision/releases.atom
       - https://github.com/sweepai/sweep/releases.atom
       - https://github.com/ToolJet/ToolJet/releases.atom
       - https://github.com/Danily07/Translumo/releases.atom
+      - https://github.com/coqui-ai/TTS/releases.atom
       - https://github.com/neuml/txtai/releases.atom
       - https://github.com/webstudio-is/webstudio/releases.atom
+      - https://rsshub.app/github/issue/getumbrel/llama-gpt
+      - https://github.com/meienberger/runtipi/releases.atom
       - https://github.com/SuperDuperDB/superduperdb/releases.atom
       - https://github.com/Codium-ai/pr-agent/releases.atom
       - https://github.com/louislam/uptime-kuma/releases.atom
-      - https://github.com/HuolalaTech/page-spy-web/releases.atom
     # config:
     #   limit: 15
 jobs:
@@ -82,23 +87,23 @@ jobs:
   #         title:  ${{on.rss.outputs.title}}
   #         message: ${{on.rss.outputs.contentSnippet}}
   #         url: ${{on.rss.outputs.link}}
-  test-curl-action:
-        name: 'Perform REST API'
-        runs-on: ubuntu-latest
-        steps:
-            - name: Split URL
-              id: split
-              run: |
-                url="${{on.rss.outputs.link}}"
-                splitedrepo="$(echo $url | awk -F'/' '{print $4"/"$5}')"
-                echo "repo=$splitedrepo" >> $GITHUB_ENV
-            - name: 'Call API'
-              uses: actionsflow/axios@v1
-              id: api
-              with:
-                url: https://ntfy.sh/lyrl-dev
-                method: 'POST'
-                body: 'Repo:${{env.repo}} ${{on.rss.outputs.title}} \n ${{on.rss.outputs.contentSnippet}} \n ${{on.rss.outputs.link}}'
-            - run: echo ${{ steps.api.outputs.status }}
-            - run: echo ${{ steps.api.outputs.data }}
-            - run: echo ${{ steps.api.outputs.headers }}
+  # test-curl-action:
+  #       name: 'Perform REST API'
+  #       runs-on: ubuntu-latest
+  #       steps:
+  #           - name: Split URL
+  #             id: split
+  #             run: |
+  #               url="${{on.rss.outputs.link}}"
+  #               splitedrepo="$(echo $url | awk -F'/' '{print $4"/"$5}')"
+  #               echo "repo=$splitedrepo" >> $GITHUB_ENV
+  #           - name: 'Call API'
+  #             uses: actionsflow/axios@v1
+  #             id: api
+  #             with:
+  #               url: https://ntfy.sh/lyrl-dev
+  #               method: 'POST'
+  #               body: 'Repo:${{env.repo}} ${{on.rss.outputs.title}} \n ${{on.rss.outputs.contentSnippet}} \n ${{on.rss.outputs.link}}'
+  #           - run: echo ${{ steps.api.outputs.status }}
+  #           - run: echo ${{ steps.api.outputs.data }}
+  #           - run: echo ${{ steps.api.outputs.headers }}
