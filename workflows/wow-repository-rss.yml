@@ -4,7 +4,94 @@ on:
       - https://rsshub.app/github/pull/azerothcore/azerothcore-wotlk
       - https://github.com/azerothcore/azerothcore-wotlk/commits.atom
       - https://rsshub.app/github/repos/azerothcore
-      # commits
+      # repos commits 
+      - https://github.com/azerothcore/azerothcore-wotlk/commits.atom
+      - https://github.com/azerothcore/Keira3/commits.atom
+      - https://github.com/azerothcore/wiki/commits.atom
+      - https://github.com/azerothcore/GitHub-Actions/commits.atom
+      - https://github.com/azerothcore/arena-spectator/commits.atom
+      - https://github.com/azerothcore/portals-in-all-capitals/commits.atom
+      - https://github.com/azerothcore/acore-cms/commits.atom
+      - https://github.com/azerothcore/acore-docker/commits.atom
+      - https://github.com/azerothcore/reusable-workflows/commits.atom
+      - https://github.com/azerothcore/aowow/commits.atom
+      - https://github.com/azerothcore/tool-tc-migration/commits.atom
+      - https://github.com/azerothcore/WoWSimpleRegistration/commits.atom
+      - https://github.com/azerothcore/skeleton-module/commits.atom
+      - https://github.com/azerothcore/chat-transmitter-bot/commits.atom
+      - https://github.com/azerothcore/universal-pwa/commits.atom
+      - https://github.com/azerothcore/GMGenie/commits.atom
+      - https://github.com/azerothcore/git-catalogue/commits.atom
+      - https://github.com/azerothcore/arena-stats/commits.atom
+      - https://github.com/azerothcore/server-status/commits.atom
+      - https://github.com/azerothcore/acore-api/commits.atom
+      - https://github.com/azerothcore/eluna-ts/commits.atom
+      - https://github.com/azerothcore/telegram-automated-db-backup/commits.atom
+      - https://github.com/azerothcore/playermap/commits.atom
+      - https://github.com/azerothcore/azerothcore-exitcode-script/commits.atom
+      - https://github.com/azerothcore/typeorm-seeding/commits.atom
+      - https://github.com/azerothcore/wp-azth-core-plg/commits.atom
+      - https://github.com/azerothcore/noderouter/commits.atom
+      - https://github.com/azerothcore/bash-lib/commits.atom
+      - https://github.com/azerothcore/SpellWork/commits.atom
+      - https://github.com/azerothcore/Unused-Guid-Search/commits.atom
+      - https://github.com/azerothcore/wow-flags-checker/commits.atom
+      - https://github.com/azerothcore/demoserver-tools/commits.atom
+      - https://github.com/azerothcore/world-boss-rank/commits.atom
+      - https://github.com/azerothcore/ac-nodejs-srp6/commits.atom
+      - https://github.com/azerothcore/azerothcore-boilerplates/commits.atom
+      - https://github.com/azerothcore/AzerothCore-Module-Installer/commits.atom
+      - https://github.com/azerothcore/acore-client/commits.atom
+      - https://github.com/azerothcore/AC-JSON-API/commits.atom
+      - https://github.com/azerothcore/apaw/commits.atom
+      - https://github.com/azerothcore/catalogue/commits.atom
+      - https://github.com/azerothcore/Registration-Page/commits.atom
+      - https://github.com/azerothcore/acore-mini-reg-page/commits.atom
+      - https://github.com/azerothcore/eluna-ts-mod-skeleton/commits.atom
+      - https://github.com/azerothcore/acore-pwa/commits.atom
+      - https://github.com/azerothcore/joiner/commits.atom
+      - https://github.com/azerothcore/mysql-tools/commits.atom
+      - https://github.com/azerothcore/cmake-utils/commits.atom
+      - https://github.com/azerothcore/wow-statistics/commits.atom
+      - https://github.com/azerothcore/directory-structure/commits.atom
+      - https://github.com/azerothcore/pvp-vendors/commits.atom
+      - https://github.com/azerothcore/acore-core-build-action/commits.atom
+      - https://github.com/azerothcore/classic-mode/commits.atom
+      - https://github.com/azerothcore/forum/commits.atom
+      - https://github.com/azerothcore/recastnavigation/commits.atom
+      - https://github.com/azerothcore/acore-node-server/commits.atom
+      - https://github.com/azerothcore/js-common/commits.atom
+      - https://github.com/azerothcore/acore-commander/commits.atom
+      - https://github.com/azerothcore/acore-php-framework/commits.atom
+      - https://github.com/azerothcore/lua-aio-modrate-exp/commits.atom
+      - https://github.com/azerothcore/lua-command-plus/commits.atom
+      - https://github.com/azerothcore/wow-telegram/commits.atom
+      - https://github.com/azerothcore/democlient-app/commits.atom
+      - https://github.com/azerothcore/TrinityCore/commits.atom
+      - https://github.com/azerothcore/PvPstats/commits.atom
+      - https://github.com/azerothcore/WoWServerWebTerminal/commits.atom
+      - https://github.com/azerothcore/universal-node/commits.atom
+      - https://github.com/azerothcore/web-character-migration-tool/commits.atom
+      - https://github.com/azerothcore/WoW-Spell-Editor/commits.atom
+      - https://github.com/azerothcore/SunstriderCore/commits.atom
+      - https://github.com/azerothcore/azerothcore-hackfixes/commits.atom
+      - https://github.com/azerothcore/wp-azth-cms/commits.atom
+      - https://github.com/azerothcore/wp-azth-core-theme/commits.atom
+      - https://github.com/azerothcore/CustomItemFix/commits.atom
+      - https://github.com/azerothcore/FusionCMS/commits.atom
+      - https://github.com/azerothcore/noggit/commits.atom
+      - https://github.com/azerothcore/azerothcore-classic/commits.atom
+      - https://github.com/azerothcore/database-classic/commits.atom
+      - https://github.com/azerothcore/ScriptDev3/commits.atom
+      - https://github.com/azerothcore/database-wotlk/commits.atom
+      - https://github.com/azerothcore/www-server-status/commits.atom
+      - https://github.com/azerothcore/docker-files/commits.atom
+      - https://github.com/azerothcore/www-keira2/commits.atom
+      - https://github.com/azerothcore/www-search-engine/commits.atom
+      - https://github.com/azerothcore/www-arena-stats/commits.atom
+      - https://github.com/azerothcore/raid-browser/commits.atom
+      - https://github.com/azerothcore/wowlauncher-delphi/commits.atom
+      # mods commits
       - https://github.com/azerothcore/mod-progression-system/commits.atom
       - https://github.com/azerothcore/mod-eluna/commits.atom
       - https://github.com/azerothcore/mod-zone-difficulty/commits.atom
@@ -130,16 +217,16 @@ jobs:
           echo title: $title
           echo contentSnippet: $contentSnippet
           echo link: $link
-  push-to-telegram:
-      name: Build
-      runs-on: ubuntu-latest
-      steps:
-        - name: send telegram message on push
-          uses: appleboy/telegram-action@master
-          with:
-            to: "-1002090832372"
-            token: "6468152559:AAGDomMcIGJ2FAbkLP5P2xMc71os-OBZmSQ"
-            message: |
-              ${{on.rss.outputs.title}}
-              ${{on.rss.outputs.contentSnippet}}
-              link: ${{on.rss.outputs.link}}
+  # push-to-telegram:
+  #     name: Build
+  #     runs-on: ubuntu-latest
+  #     steps:
+  #       - name: send telegram message on push
+  #         uses: appleboy/telegram-action@master
+  #         with:
+  #           to: "-1002090832372"
+  #           token: "6468152559:AAGDomMcIGJ2FAbkLP5P2xMc71os-OBZmSQ"
+  #           message: |
+  #             ${{on.rss.outputs.title}}
+  #             ${{on.rss.outputs.contentSnippet}}
+  #             link: ${{on.rss.outputs.link}}
