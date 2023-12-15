@@ -4,7 +4,7 @@ on:
       - https://rsshub.app/github/pull/azerothcore/azerothcore-wotlk
       - https://github.com/azerothcore/azerothcore-wotlk/commits.atom
       - https://rsshub.app/github/repos/azerothcore
-      # repos commits 
+      # repos commits
       - https://github.com/azerothcore/azerothcore-wotlk/commits.atom
       - https://github.com/azerothcore/Keira3/commits.atom
       - https://github.com/azerothcore/wiki/commits.atom
@@ -218,15 +218,15 @@ jobs:
           echo contentSnippet: $contentSnippet
           echo link: $link
   push-to-telegram:
-      name: Build
-      runs-on: ubuntu-latest
-      steps:
-        - name: send telegram message on push
-          uses: appleboy/telegram-action@master
-          with:
-            to: "-1002090832372"
-            token: "6468152559:AAGDomMcIGJ2FAbkLP5P2xMc71os-OBZmSQ"
-            message: |
-              ${{on.rss.outputs.title}}
-              ${{on.rss.outputs.contentSnippet}}
-              link: ${{on.rss.outputs.link}}
+    name: Push To Telegram
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: "-1002090832372"
+          token: "6468152559:AAGDomMcIGJ2FAbkLP5P2xMc71os-OBZmSQ"
+          message: |
+            ${{on.rss.outputs.title}}
+            ${{on.rss.outputs.contentSnippet}}
+            link: ${{on.rss.outputs.link}}
