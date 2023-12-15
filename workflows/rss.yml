@@ -81,7 +81,7 @@ jobs:
   # pushover-actions:
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - uses: actions/checkout@v2 
+  #     - uses: actions/checkout@v2
   #     - name: pushover-actions
   #       uses: umahmood/pushover-actions@main
   #       env:
@@ -92,36 +92,36 @@ jobs:
   #         message: ${{on.rss.outputs.contentSnippet}}
   #         url: ${{on.rss.outputs.link}}
   push-to-ntfy:
-        name: 'Push Ntfy'
-        runs-on: ubuntu-latest
-        steps:
-            - name: Split URL
-              id: split
-              run: |
-                url="${{on.rss.outputs.link}}"
-                splitedrepo="$(echo $url | awk -F'/' '{print $4" "$5}')"
-                echo "repo=$splitedrepo" >> $GITHUB_ENV
-            - name: 'Call API'
-              uses: actionsflow/axios@v1
-              id: api
-              with:
-                url: https://ntfy.sh/lyrl-dev
-                method: 'POST'
-                body: 'Repo:${{env.repo}} ${{on.rss.outputs.title}} ${{on.rss.outputs.contentSnippet}} ${{on.rss.outputs.link}}'
-            - run: echo ${{ on.rss.outputs }}
-            - run: echo ${{ steps.api.outputs.status }}
-            - run: echo ${{ steps.api.outputs.data }}
-            - run: echo ${{ steps.api.outputs.headers }}
+    name: "Push Ntfy"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Split URL
+        id: split
+        run: |
+          url="${{on.rss.outputs.link}}"
+          splitedrepo="$(echo $url | awk -F'/' '{print $4" "$5}')"
+          echo "repo=$splitedrepo" >> $GITHUB_ENV
+      - name: "Call API"
+        uses: actionsflow/axios@v1
+        id: api
+        with:
+          url: https://ntfy.sh/lyrl-dev
+          method: "POST"
+          body: "Repo:${{env.repo}} ${{on.rss.outputs.title}} ${{on.rss.outputs.contentSnippet}} ${{on.rss.outputs.link}}"
+      - run: echo ${{ on.rss.outputs }}
+      - run: echo ${{ steps.api.outputs.status }}
+      - run: echo ${{ steps.api.outputs.data }}
+      - run: echo ${{ steps.api.outputs.headers }}
   push-to-telegram:
-        name: Build
-        runs-on: ubuntu-latest
-        steps:
-          - name: send telegram message on push
-            uses: appleboy/telegram-action@master
-            with:
-              to: "-1002000503194"
-              token: "6468152559:AAGDomMcIGJ2FAbkLP5P2xMc71os-OBZmSQ"
-              message: |
-                ${{on.rss.outputs.title}}
-                ${{on.rss.outputs.contentSnippet}}
-                link: ${{on.rss.outputs.link}}
+    name: Push To Telegram
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: "-1002000503194"
+          token: "6468152559:AAGDomMcIGJ2FAbkLP5P2xMc71os-OBZmSQ"
+          message: |
+            ${{on.rss.outputs.title}}
+            ${{on.rss.outputs.contentSnippet}}
+            link: ${{on.rss.outputs.link}}
