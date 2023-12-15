@@ -53,7 +53,6 @@ on:
       - https://github.com/coqui-ai/TTS/releases.atom
       - https://github.com/neuml/txtai/releases.atom
       - https://github.com/webstudio-is/webstudio/releases.atom
-      - https://rsshub.app/github/issue/getumbrel/llama-gpt
       - https://github.com/meienberger/runtipi/releases.atom
       - https://github.com/SuperDuperDB/superduperdb/releases.atom
       - https://github.com/Codium-ai/pr-agent/releases.atom
