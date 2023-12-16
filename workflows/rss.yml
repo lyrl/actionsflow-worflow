@@ -64,6 +64,7 @@ on:
       - https://github.com/fatedier/frp/releases.atom
       # 
       - https://github.com/Sequel-Ace/Sequel-Ace/releases.atom
+      - https://github.com/MichaelYuhe/ai-group-tabs/releases.atom
     # config:
     #   limit: 15
 jobs:
