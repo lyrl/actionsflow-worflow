@@ -65,6 +65,7 @@ on:
       # 
       - https://github.com/Sequel-Ace/Sequel-Ace/releases.atom
       - https://github.com/MichaelYuhe/ai-group-tabs/releases.atom
+      - https://github.com/jmorganca/ollama/releases.atom
     # config:
     #   limit: 15
 jobs:
