@@ -57,7 +57,7 @@ on:
       - https://github.com/SuperDuperDB/superduperdb/releases.atom
       - https://github.com/Codium-ai/pr-agent/releases.atom
       - https://github.com/louislam/uptime-kuma/releases.atom
-      - https://github.com/bytebase/bytebase/release.atom
+      - https://github.com/bytebase/bytebase/releases.atom
       # PassWall
       - https://github.com/xiaorouji/openwrt-passwall/releases.atom
       - https://github.com/XTLS/Xray-core/releases.atom
@@ -69,7 +69,7 @@ on:
       - https://github.com/MichaelYuhe/ai-group-tabs/releases.atom
       - https://github.com/jmorganca/ollama/releases.atom
       - https://github.com/pandora-next/deploy/releases.atom
-      - https://github.com/lobehub/lobe-chat/release.atom
+      - https://github.com/lobehub/lobe-chat/releases.atom
     # config:
     #   limit: 15
 jobs:
