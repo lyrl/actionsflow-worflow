@@ -57,6 +57,7 @@ on:
       - https://github.com/SuperDuperDB/superduperdb/releases.atom
       - https://github.com/Codium-ai/pr-agent/releases.atom
       - https://github.com/louislam/uptime-kuma/releases.atom
+      - https://github.com/bytebase/bytebase/release.atom
       # PassWall
       - https://github.com/xiaorouji/openwrt-passwall/releases.atom
       - https://github.com/XTLS/Xray-core/releases.atom
