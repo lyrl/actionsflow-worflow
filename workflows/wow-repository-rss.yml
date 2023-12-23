@@ -200,6 +200,8 @@ on:
       - https://github.com/azerothcore/mod-bg-battle-for-gilneas/commits.atom
       - https://github.com/azerothcore/mod-tic-tac-toe/commits.atom
       - https://github.com/azerothcore/mod-alpha-rewards/commits.atom
+      # azerothcore
+      - https://github.com/Th3AnG3L/Azeroth-StartUp/releases.atom
     # config:
     #   limit: 4
 jobs:
