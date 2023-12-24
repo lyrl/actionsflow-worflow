@@ -76,6 +76,7 @@ on:
       - https://github.com/karmada-io/karmada/releases.atom
       # dev tools
       - https://github.com/coder/coder/releases.atom
+      - https://github.com/hua1995116/indiehackers-steps/commits.atom
     # config:
     #   limit: 15
 jobs:
