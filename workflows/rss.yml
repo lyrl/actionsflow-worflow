@@ -79,6 +79,7 @@ on:
       - https://github.com/hua1995116/indiehackers-steps/commits.atom
       - https://github.com/quack-ai/quack-companion-extension/commits.atom
       - https://github.com/mage-ai/mage-ai/releases.atom
+      - https://github.com/labring/FastGPT/releases
     # config:
     #   limit: 15
 jobs:
