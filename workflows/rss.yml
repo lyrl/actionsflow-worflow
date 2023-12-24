@@ -74,6 +74,8 @@ on:
       - https://github.com/danswer-ai/danswer/releases.atom
       - https://github.com/FL33TW00D/whisper-turbo/releases.atom
       - https://github.com/karmada-io/karmada/releases.atom
+      # dev tools
+      - https://github.com/coder/coder/releases.atom
     # config:
     #   limit: 15
 jobs:
@@ -124,16 +126,16 @@ jobs:
   #     - run: echo ${{ steps.api.outputs.status }}
   #     - run: echo ${{ steps.api.outputs.data }}
   #     - run: echo ${{ steps.api.outputs.headers }}
-  push-to-telegram:
-    name: Push To Telegram
-    runs-on: ubuntu-latest
-    steps:
-      - name: send telegram message on push
-        uses: appleboy/telegram-action@master
-        with:
-          to: "-1002000503194"
-          token: "6468152559:AAGDomMcIGJ2FAbkLP5P2xMc71os-OBZmSQ"
-          message: |
-            ${{on.rss.outputs.title}}
-            ${{on.rss.outputs.contentSnippet}}
-            link: ${{on.rss.outputs.link}}
+  # push-to-telegram:
+  #   name: Push To Telegram
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: send telegram message on push
+  #       uses: appleboy/telegram-action@master
+  #       with:
+  #         to: "-1002000503194"
+  #         token: "6468152559:AAGDomMcIGJ2FAbkLP5P2xMc71os-OBZmSQ"
+  #         message: |
+  #           ${{on.rss.outputs.title}}
+  #           ${{on.rss.outputs.contentSnippet}}
+  #           link: ${{on.rss.outputs.link}}
