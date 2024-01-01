@@ -81,6 +81,7 @@ on:
       - https://github.com/mage-ai/mage-ai/releases.atom
       - https://github.com/labring/FastGPT/releases.atom
       - https://github.com/Pythagora-io/gpt-pilot/commits.atom
+      - https://github.com/paperless-ngx/paperless-ngx/releases.atom
     # config:
     #   limit: 15
 jobs:
