@@ -83,6 +83,7 @@ on:
       - https://github.com/Pythagora-io/gpt-pilot/commits.atom
       - https://github.com/paperless-ngx/paperless-ngx/releases.atom
       - https://github.com/twentyhq/twenty/releases.atom
+      - https://github.com/zhuangshaobin/Vlogger/releases.atom
     # config:
     #   limit: 15
 jobs:

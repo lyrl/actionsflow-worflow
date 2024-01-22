@@ -202,7 +202,6 @@ on:
       - https://github.com/azerothcore/mod-alpha-rewards/commits.atom
       # azerothcore
       - https://github.com/Th3AnG3L/Azeroth-StartUp/releases.atom
-      - https://github.com/zhuangshaobin/Vlogger/releases.atom
     # config:
     #   limit: 4
 jobs:
