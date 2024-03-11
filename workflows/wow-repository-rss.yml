@@ -194,7 +194,6 @@ on:
       - https://github.com/azerothcore/mod-fireworks-on-level/commits.atom
       - https://github.com/azerothcore/mod-phased-duels/commits.atom
       - https://github.com/azerothcore/mod-pvpscript/commits.atom
-      - https://github.com/azerothcore/mod-new-character-perks/commits.atom
       - https://github.com/azerothcore/mod-ip2nation/commits.atom
       - https://github.com/azerothcore/mod-bg-slaveryvalley/commits.atom
       - https://github.com/azerothcore/mod-bg-battle-for-gilneas/commits.atom
