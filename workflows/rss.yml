@@ -89,8 +89,8 @@ on:
       # book
       - https://github.com/rasbt/LLMs-from-scratch/commits.atom
       - https://github.com/trimstray/the-book-of-secret-knowledge/commits.atom
-    # config:
-    #   limit: 15
+    config:
+      limit: 5
 jobs:
   print:
     name: Print
